@@ -27,6 +27,14 @@ canvas.addEventListener('mouseup', (e) => {
   console.log(isPressed, x, y);
 })
 
+canvas.addEventListener('mousemove', (e) => {
+  if(isPressed){
+    x2 = e.offsetX;
+    y2 = e.offsetY;
+    console.log(isPressed, x2, y2);
+  }
+})
+
 function drawCircle(x, y){
   ctx.beginPath();
   ctx.arc(x, y, size, 0, Math.PI * 2);
